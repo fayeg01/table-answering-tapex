@@ -107,17 +107,17 @@ if __name__ == '__main__':
 
     logger.info("*" * 80)
     logger.info("Prepare to download WikiSQL from the official link...")
-    wikisql_raw_data_dir = download_wikisql()
+    wikisql_raw_data_dir = "WikiSQLData"
     logger.info("Download finished! The original WikiSQL dataset is saved in {}".format(wikisql_raw_data_dir))
     processed_wikisql_data_dir = os.path.join(PROCESSED_DATASET_FOLDER, "wikisql")
 
     logger.info("*" * 80)
     logger.info("Process the dataset and save the processed dataset in {}".format(processed_wikisql_data_dir))
-    build_wikisql_fariseq_dataset("train", os.path.join(wikisql_raw_data_dir, "data", "train.jsonl"),
+    build_wikisql_fariseq_dataset("train", os.path.join(wikisql_raw_data_dir, "train.jsonl"),
                                   processed_wikisql_data_dir)
-    build_wikisql_fariseq_dataset("valid", os.path.join(wikisql_raw_data_dir, "data", "dev.jsonl"),
+    build_wikisql_fariseq_dataset("valid", os.path.join(wikisql_raw_data_dir, "dev.jsonl"),
                                   processed_wikisql_data_dir)
-    build_wikisql_fariseq_dataset("test", os.path.join(wikisql_raw_data_dir, "data", "test.jsonl"),
+    build_wikisql_fariseq_dataset("test", os.path.join(wikisql_raw_data_dir, "test.jsonl"),
                                   processed_wikisql_data_dir)
 
     logger.info("*" * 80)

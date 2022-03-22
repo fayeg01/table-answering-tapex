@@ -22,10 +22,10 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
-        'transformers>=4.6.0',
-        'numpy==1.20.3',
-        "fairseq@git+git://github.com/pytorch/fairseq@801a64683164680562c77b688d9ca77fc3e0cea7",
-        "records",
-        "pandas"
+        # 'transformers>=4.6.0',
+        # 'numpy==1.20.3',
+        # "fairseq@git+git://github.com/pytorch/fairseq@801a64683164680562c77b688d9ca77fc3e0cea7",
+        # "records",
+        # "pandas"
     ],
 )
